@@ -1,0 +1,55 @@
+.app-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(57, 56, 59, 0.9);
+    @include flexbox();
+    height: 0.45rem;
+    .top-ico {
+        img {
+            width: 0.325rem;
+            height: 0.325rem;
+            margin: 0.05rem 0.1rem 0 0.1rem;
+        }
+    }
+    .top-text {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        line-height: 0.15rem;
+        em {
+            font-weight: 100;
+            font-size: 0.1rem;
+            display: block;
+            color: #fff;
+            margin-top: 0.04rem
+        }
+        i {
+            font-size: 0.1rem;
+            color: #ffd71b;
+            display: block;
+        }
+    }
+    .top-right {
+        right: 0;
+        @include flexbox();
+        justify-content: space-between;
+        line-height: 0.45rem;
+        span {
+            margin-left: 0.35rem;
+            background-image: -webkit-linear-gradient( -180deg, rgb(215, 61, 105) 0%, rgb(199, 57, 141) 36%, rgb(183, 52, 177) 100%);
+            width:0.664rem;
+            height:0.24rem;
+            border-radius: 3px;
+            margin-top:0.1rem;
+            text-align: center;line-height: 0.24rem;
+            color:#fff;
+            font-size:0.1rem;
+        }
+        i{
+            color:#fff;
+            margin-left:0.15rem;
+            font-size:0.15rem
+        };
+    }
+}
