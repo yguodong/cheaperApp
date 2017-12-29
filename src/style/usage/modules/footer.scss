@@ -1,0 +1,26 @@
+.app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    ul {
+        @include flexbox();
+        color: #585658;
+        li {
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            width: 20%;
+            i{
+                font-size: 0.2rem;
+                
+            }
+            span{
+                display: block;
+                margin-top:-0.07rem;
+                @include transform(scale(0.7));
+                font-weight: 100;
+            }
+        }
+    }
+}
