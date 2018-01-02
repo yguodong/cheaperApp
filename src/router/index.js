@@ -2,8 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 Vue.use(Router)
+import Home from '../components/home/home'
+const routes=[
+	{path:'',redirect:'/home'},
+	{path:'/home',name:'home',component:Home},
+]
 
-export default new Router({
-  routes: [
-  ]
+const router= new Router({
+	routes
 })
+
+export default router

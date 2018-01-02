@@ -3,6 +3,7 @@
 		<AppHeader></AppHeader>
 		<AppList v-if="false"></AppList>
 		<AppFooter></AppFooter>
+		<router-view></router-view>
 	</div>
 </template>
 

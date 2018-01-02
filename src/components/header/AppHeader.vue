@@ -30,14 +30,10 @@
 </template>
 
 <script>
+	import { mapState} from "vuex"
 	import axios from 'axios'
 	export default {
 		name: 'app-header',
-		data: function() {
-			return {
-				headerList: []
-			}
-		},
 		methods: {
 			getHeaderList() {
 				let that = this
@@ -46,9 +42,12 @@
 						_: Date.now()
 					}
 				}).then((response) => {
-					that.headerList = response.data.data
+					that.$store.state.headerList = response.data.data
 				})
 			}
+		},
+		computed:{
+			...mapState(['headerList'])
 		},
 		created() {
 			this.getHeaderList()
