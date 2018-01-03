@@ -1,0 +1,28 @@
+.app-home {
+    background: #fff;
+    overflow: hidden;
+    .home-header {
+        width: 100%;
+        .home-header-pic {
+            img:nth-child(1) {
+                float: left;
+                width: 100%;
+            }
+            img:nth-child(2) {
+                width: 50%;
+                padding: 3px 1px 0 0;
+            }
+            img:nth-child(3) {
+                width: 50%;
+                padding: 3px 0 0 2px;
+            }
+        }
+        .home-header-pic2 {
+            margin-bottom: 0.0785rem;
+            background: #ffffff;
+            img {
+                width: 20%;
+            }
+        }
+    }
+}

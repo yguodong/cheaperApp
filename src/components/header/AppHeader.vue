@@ -38,12 +38,12 @@
 </template>
 
 <script>
-	import { mapState } from "vuex"
 	import axios from 'axios'
 	export default {
 		name: 'app-header',
 		data() {
 			return {
+				headerList:[],
 				popupVisible: false
 			}
 		},
@@ -55,12 +55,9 @@
 						_: Date.now()
 					}
 				}).then((response) => {
-					that.$store.state.headerList = response.data.data
+					that.headerList = response.data.data
 				})
 			}
-		},
-		computed: {
-			...mapState(['headerList'])
 		},
 		created() {
 			this.getHeaderList()
