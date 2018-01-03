@@ -1,7 +1,6 @@
 <template>
 	<div class="app-header">
 		<div class="header-top">
-
 			<div class="top-ico">
 				<img src="http://img.cdn.daling.com/assets/web-touch/dl-icon1.b02ba9.png" />
 			</div>
@@ -20,20 +19,34 @@
 				<input type="search" placeholder="搜索商品" data-search-input="">
 			</div>
 			<div class="search-menu">
-					<ul>
-						<li v-for="hdList in headerList">{{hdList.title}}</li>
-					</ul>
+				<ul>
+					<li v-for="hdList in headerList">{{hdList.title}}</li>
+					<div class="search-menu-list">
+						<i @click="popupVisible=!popupVisible" class="yo-ico">&#xf031;</i>
+					</div>
+				</ul>
+
 			</div>
 		</div>
+			<mt-popup width=100% v-model="popupVisible" position="top">
+				<ul>
+					<li v-for="hdList in headerList">{{hdList.title}}</li>
+				</ul>
+			</mt-popup>
 	</div>
 
 </template>
 
 <script>
-	import { mapState} from "vuex"
+	import { mapState } from "vuex"
 	import axios from 'axios'
 	export default {
 		name: 'app-header',
+		data() {
+			return {
+				popupVisible: false
+			}
+		},
 		methods: {
 			getHeaderList() {
 				let that = this
@@ -46,7 +59,7 @@
 				})
 			}
 		},
-		computed:{
+		computed: {
 			...mapState(['headerList'])
 		},
 		created() {

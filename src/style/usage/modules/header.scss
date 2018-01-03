@@ -82,17 +82,43 @@
             background: #fff;
             overflow-x: auto;
             ul {
-                width: 9rem;
+                width: 9.35rem;
+                flex-wrap: nowrap;
+                overflow: hidden;
                 li {
                     text-align: center;
+                    float: left;
                     width: 0.75rem;
                     height: 100%;
-                    float: left;
                     line-height: 0.36rem;
-                    font-size:0.1rem;
-                    color:#585658
+                    font-size: 0.1rem;
+                    color: #585658;
+                }
+                .search-menu-list {
+                    height: 0.36rem;
+                    width: 0.45rem;
+                    background: #fff;
+                    position: fixed;
+                    right: 0;
+                    text-align: center;
+                    line-height: .36rem;
+                    i {
+                        font-size: 0.2rem;
+                    }
                 }
             }
+        }
+    }
+    ul {
+        width: 3.75rem;
+        background: #fff;
+        overflow:hidden;
+        li {
+            width: 25%;
+            height: 0.36rem;
+            text-align: center;
+            line-height: 0.36rem;
+            float: left;
         }
     }
 }
