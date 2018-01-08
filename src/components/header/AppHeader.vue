@@ -21,7 +21,7 @@
 			</div>
 			<div class="search-menu">
 					<ul>
-						<li v-for="hdList in headerList">{{hdList.title}}</li>
+						<router-link tag="li" to="/boylist" @click.native="getID(hdList.channel_id)" :key="hdList.channel_id" v-for="hdList in headerList">{{hdList.title}}</router-link>
 					</ul>
 			</div>
 		</div>
@@ -30,12 +30,14 @@
 </template>
 
 <script>
+	import bus from '../modules/bus'
 	import axios from 'axios'
 	export default {
 		name: 'app-header',
 		data: function() {
 			return {
-				headerList: []
+				headerList: [],
+				headerListID:""
 			}
 		},
 		methods: {
@@ -48,15 +50,29 @@
 				}).then((response) => {
 					that.headerList = response.data.data
 				})
-			}
+			},
+			getID(id){
+				this.headerListID=id
+				//console.log(this.headerListID)
+				this.$emit('child-info',this.headerListID)
+				setTimeout(()=>{
+					this.getBoy()
+				},0)
+			},
+			getBoy(){
+		      	bus.$emit('change-list')
+		      	bus.$emit('m-list')
+		   },
+		   getBoyList(){
+		   		
+		   }
 		},
 		created() {
 			this.getHeaderList()
 		}
-
 	}
 </script>
 
 <style lang="scss">
-
+	
 </style>

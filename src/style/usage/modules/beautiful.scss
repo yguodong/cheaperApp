@@ -1,0 +1,55 @@
+.app-beautiful{
+    width:100%;
+    margin-bottom:0.09rem;
+    padding-bottom:0.09rem;
+    ul{
+        height:0.36rem;
+        display:flex;
+        position:relative;
+        li{
+            flex-grow:1;
+            line-height:0.36rem;
+            text-align:center;
+            position:relative;
+        }
+        .hover{
+            color:#af5bbf;
+        }
+        .hover:before{
+            content: "";
+            font-size: 0;
+            position: absolute;
+            background: #af5bbf;
+            height: 1px;
+            width: 0.18rem;
+            left: 50%;
+            margin-left: -0.09rem;
+            bottom: 0.06rem;
+        }
+    }
+    ol{
+        overflow:hidden;
+        li{
+            float:left;
+            width:25%;
+            box-sizing: border-box;
+            padding-top:0.09rem;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:space-between;
+            em{
+                display:block;
+                width:0.68rem;
+                height:0.6rem;
+                background:url('http://img.cdn.daling.com/data/files/mobile/2017/05/26/14957944183373.jpg') no-repeat center center;
+                background-position:center center;
+                background-repeat:no-repeat;
+                background-size:80%;
+            }
+        }
+    }
+    .hide{
+        display:none;
+    }
+}
