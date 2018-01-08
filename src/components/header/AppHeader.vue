@@ -1,6 +1,6 @@
 <template>
 	<div class="app-header">
-		<div class="header-top">
+		<div class="header-top" v-if="isdownShow">
 			<div class="top-ico">
 				<img src="http://img.cdn.daling.com/assets/web-touch/dl-icon1.b02ba9.png" />
 			</div>
@@ -10,10 +10,10 @@
 			</div>
 			<div class="top-right">
 				<span>立即下载</span>
-				<i class="yo-ico">&#xf077;</i>
+				<i @click="downShow" class="yo-ico">&#xf077;</i>
 			</div>
 		</div>
-		<div class="search">
+		<div class="search" ref="po">
 			<div class="search_input">
 				<i class="yo-ico">&#xf067;</i>
 				<input type="search" placeholder="搜索商品" data-search-input="">
@@ -27,11 +27,14 @@
 				</ul>
 			</div>
 		</div>
-			<mt-popup width=100% v-model="popupVisible" position="top">
+		<mt-popup width=100% v-model="popupVisible" position="top">
+			<div class="mt-list">
 				<ul>
 					<li v-for="hdList in headerList">{{hdList.title}}</li>
 				</ul>
-			</mt-popup>
+			</div>
+
+		</mt-popup>
 	</div>
 
 </template>
@@ -45,7 +48,8 @@
 			return {
 				headerList:[],
 				popupVisible: false,
-				headerListID:""
+				headerListID:"",
+				isdownShow: true
 			}
 		},
 		methods: {
@@ -73,10 +77,18 @@
 		   },
 		   getBoyList(){
 		   		
-		   }
+		   },
+			downShow(isdownShow) {
+				this.isdownShow = !this.isdownShow
+				this.$refs.po.style.marginTop = 0
+			}
 		},
 		created() {
 			this.getHeaderList()
+		},
+		mounted() {
+
+			//			window.addEventListener('scroll', this.Hposition)
 		}
 	}
 </script>

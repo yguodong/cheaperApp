@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import './style/usage/app.scss'	
+import './components/modules/directives'
 Vue.config.productionTip = false
 import MintUI from 'mint-ui';
 import'mint-ui/lib/style.css'
