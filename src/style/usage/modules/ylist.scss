@@ -4,30 +4,7 @@
     
 }
 
-.search {
-    width: 100%;
-    background: red;
-    background: #efefef;
-    position: relative;
-    .search_input {
-        padding: 0 0.1rem;
-        text-align: center;
-        line-height: 0.4rem;
-        i {
-            position: absolute;
-            left: 1.4rem;
-            top: 0.02rem;
-        }
-        input {
-            width: 100%;
-            text-align: center;
-            height: 0.26rem;
-            border: none;
-            border-radius: 0.4rem;
-            font-size: 0.1rem;
-        }
-    }
-} 
+
 .ylscontent{
     @include flexbox();
     @include flex-direction(row);

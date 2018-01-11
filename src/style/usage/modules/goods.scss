@@ -1,0 +1,43 @@
+.app-goods{
+    .shopTop{
+        margin-top:0.45rem;
+        width:100%;
+        padding:0 0.09rem;
+        height:0.39rem;
+        line-height:0.39rem;
+        margin-bottom:0.09rem;
+        text-align:center;
+        background:#fff;
+    }
+    .shopCenter{
+        width:100%;
+        height:2.69rem;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        span{
+            display:block;
+            width:0.67rem;
+            height:0.68rem;
+            background:url('http://img.cdn.daling.com/assets/web-touch/cart_empty_bg1.6f36d9.jpg') no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+        p{
+            padding:0.3rem 0 0.34rem 0;
+            line-height:100%;
+            font-size:0.12rem;
+        }
+        i{
+            display:block;
+            width:0.67rem;
+            height:0.24rem;
+            line-height:0.24rem;
+            text-align:center;
+            color: #585659;
+            border:1px solid #ccc;
+            border-radius:0.05rem;
+            box-shadow:0 0 5px #ccc;
+        }
+    }
+}

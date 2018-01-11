@@ -4,6 +4,9 @@
         background: rgba(57, 56, 59, 0.9);
         @include flexbox();
         height: 0.45rem;
+        top: 0;
+        z-index: 1001;
+        position: fixed;
         .top-ico {
             img {
                 width: 0.325rem;
@@ -34,8 +37,9 @@
             @include flexbox();
             justify-content: space-between;
             line-height: 0.45rem;
+            padding-left: 0.35rem;
             span {
-                margin-left: 0.35rem;
+
                 background-image: -webkit-linear-gradient( -180deg, rgb(215, 61, 105) 0%, rgb(199, 57, 141) 36%, rgb(183, 52, 177) 100%);
                 width: 0.664rem;
                 height: 0.24rem;
@@ -55,10 +59,12 @@
         }
     }
     .search {
+        margin-top:45px;
         width: 100%;
         background: red;
         background: #efefef;
         position: relative;
+        z-index: 1000;
         .search_input {
             padding: 0 0.1rem;
             text-align: center;
@@ -98,7 +104,7 @@
                     height: 0.36rem;
                     width: 0.45rem;
                     background: #fff;
-                    position: fixed;
+                    position: absolute;
                     right: 0;
                     text-align: center;
                     line-height: .36rem;
@@ -109,16 +115,18 @@
             }
         }
     }
-    ul {
-        width: 3.75rem;
-        background: #fff;
-        overflow:hidden;
-        li {
-            width: 25%;
-            height: 0.36rem;
+    .mt-list {
+        ul {width:100vw;
+            background: #fff;
+            overflow: hidden;
             text-align: center;
-            line-height: 0.36rem;
-            float: left;
+            li {
+                width: 25vw;
+                height: 0.36rem;
+                text-align: center;
+                line-height: 0.36rem;
+                float: left;
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 @import "./core/reset.scss";
-@import "./core/reset.scss";
 @import "./modules/footer.scss";
 @import "./modules/common.scss";
 @import "./modules/header.scss";
@@ -7,3 +6,8 @@
 @import "./modules/home.scss";
 @import "./modules/ylist.scss";
 @import "./modules/register.scss";
+@import "./modules/beautiful.scss";
+@import "./modules/goods.scss";
+html,body{
+    background:#f5f5f5;
+}

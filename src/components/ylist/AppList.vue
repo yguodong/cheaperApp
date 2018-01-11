@@ -1,13 +1,5 @@
 <template>
     <div class="app-list">
-        <div class="search">
-            <div class="search_input">
-                <i class="yo-ico">&#xf067;</i>
-                <input type="search" placeholder="搜索商品" data-search-input="">
-            </div>
-        </div>
-            
-
         <div class="ylscontent">
             <div class="leftsort">
                 <ul>
