@@ -13,7 +13,7 @@
 			<i class="yo-ico">&#xe669;</i>
 			<span>约惠</span>
 		</router-link>
-		<router-link to="" tag="li">
+		<router-link to="/car" tag="li">
 		<i class="yo-ico">&#xe501;</i>
 			<span>购物车</span>
 		</router-link>

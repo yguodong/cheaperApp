@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="search" ref="po">
-			<div class="search_input">
+			<div class="search_input" v-if="isBoyHeader">
 				<i class="yo-ico">&#xf067;</i>
 				<input type="search" placeholder="搜索商品" data-search-input="">
 			</div>
@@ -33,7 +33,6 @@
 					<li v-for="hdList in headerList">{{hdList.title}}</li>
 				</ul>
 			</div>
-
 		</mt-popup>
 	</div>
 
@@ -49,7 +48,8 @@
 				headerList:[],
 				popupVisible: false,
 				headerListID:"",
-				isdownShow: true
+				isdownShow: true,
+				isBoyHeader:true
 			}
 		},
 		methods: {
@@ -64,8 +64,12 @@
 				})
 			},
 			getID(id){
+				this.isBoyHeader=false
+				this.isdownShow=false
 				this.headerListID=id
 				//console.log(this.headerListID)
+				var search = document.getElementsByClassName('search')[0]
+				search.style.marginTop = 0
 				this.$emit('child-info',this.headerListID)
 				setTimeout(()=>{
 					this.getBoy()
@@ -74,10 +78,7 @@
 			getBoy(){
 		      	bus.$emit('change-list')
 		      	bus.$emit('m-list')
-		   },
-		   getBoyList(){
-		   		
-		   },
+		 	},
 			downShow(isdownShow) {
 				this.isdownShow = !this.isdownShow
 				this.$refs.po.style.marginTop = 0
@@ -85,10 +86,6 @@
 		},
 		created() {
 			this.getHeaderList()
-		},
-		mounted() {
-
-			//			window.addEventListener('scroll', this.Hposition)
 		}
 	}
 </script>

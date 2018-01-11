@@ -1,5 +1,5 @@
 <template>
-	<div class="boy-list">
+	<div class="boy-list"> 
 		<app-beautiful :AppHeaderList='AppHeaderList'></app-beautiful>
 		<dl v-for="goods in list">
 			<dt :style="{'background':'url('+goods.info.cover_image+') no-repeat center center','background-size':'cover'}">
@@ -18,17 +18,17 @@
 					<span>￥{{goods.info.price}}</span>
 					<p>
 						<em>{{goods.info.add_cart_num}}<br/>加入购物车</em>
-						<i class="icon icon-cart"></i>
+						<i class="fa fa-shopping-cart"></i>
 					</p>
 				</div>
 			</dd>
 		</dl>
 		<div class="list-fixed" v-if="true">
-			<div class="list-top" @click="goTop">
-				<span class="icon icon-up"></span>
+			<div class="list-top" @click="goTop" v-if="isdisplay">
+				<span class="fa fa-upload"></span>
 			</div>
 			<div class="list-car">
-				<span class="icon icon-cart"></span>
+				<span class="fa fa-shopping-cart"></span>
 			</div>
 		</div>
 	</div>
@@ -72,7 +72,14 @@
 				})
 			},
 			goTop(){
-				scrollY = 0
+				document.documentElement.scrollTop = 0
+			},
+			goTopShow(){
+				if(scrollY > 700){
+					this.isdisplay=true
+				}else{
+					this.isdisplay=false
+				}
 			}
 		},
 		created(){
@@ -80,6 +87,7 @@
 //			console.log(this.list)
 		},
 		mounted(){  
+			window.addEventListener("scroll",this.goTopShow)
       		bus.$on('change-list',function(){
       			this.list=[]
       			//console.log(this.AppHeaderList)
