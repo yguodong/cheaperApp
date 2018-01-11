@@ -1,8 +1,8 @@
 <template>
 	<div id="app">
-		<AppHeader></AppHeader>
+		<AppHeader :isTopShow='isTopShow'></AppHeader>
 		<AppList v-if="false"></AppList>
-		<AppFooter></AppFooter>
+		<AppFooter :gdShow='gdShow' :gdHide="gdHide"></AppFooter>
 		<router-view></router-view>
 	</div>
 </template>
@@ -13,10 +13,25 @@
 	import AppList from './components/boylist/boylist'
 	export default {
 		name: 'app',
+		data:function(){
+			return {
+				isTopShow:true
+			}
+		},
 		components: {
 			AppFooter,AppHeader,AppList
+		},
+		methods:{
+			gdShow(){
+				this.isTopShow=false
+			},
+			gdHide(){
+				this.isTopShow=true
+			}
 		}
-	}
+		
+	
+	}	
 </script>
 
 <style lang="scss">

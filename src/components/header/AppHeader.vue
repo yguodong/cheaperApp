@@ -13,12 +13,12 @@
 				<i class="yo-ico">&#xf077;</i>
 			</div>
 		</div>
-		<div class="search">
+		<div class="search" v-show="isTopShow">
 			<div class="search_input">
 				<i class="yo-ico">&#xf067;</i>
 				<input type="search" placeholder="搜索商品" data-search-input="">
 			</div>
-			<div class="search-menu">
+			<div class="search-menu" v-show="isTopShow">
 				<ul>
 					<li v-for="hdList in headerList">{{hdList.title}}</li>
 					<div class="search-menu-list">
@@ -28,7 +28,7 @@
 
 			</div>
 		</div>
-			<mt-popup width=100% v-model="popupVisible" position="top">
+			<mt-popup  width=100% v-model="popupVisible" position="top">
 				<ul>
 					<li v-for="hdList in headerList">{{hdList.title}}</li>
 				</ul>
@@ -41,10 +41,12 @@
 	import axios from 'axios'
 	export default {
 		name: 'app-header',
+		props:['isTopShow'],
 		data() {
 			return {
 				headerList:[],
-				popupVisible: false
+				popupVisible: false,
+
 			}
 		},
 		methods: {
