@@ -1,0 +1,54 @@
+    .app-yuehui {
+        .yh-content {
+            padding-top: 0.02rem;
+            padding-left: 0.028rem;
+            padding-right: 0.028rem;
+            background-color: white;
+            text-align: center;
+            img {
+                height: 2.5rem;
+                margin-bottom: 0.06rem;
+                margin-top:0.06rem
+            }
+            p {
+                height: 0.2rem;
+                line-height: 0.2rem;
+                font-size: 0.1rem;
+                color: #252525;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            span {
+                display: block;
+                color: #9f9f9f;
+                font-size: 0.05rem;
+                overflow: hidden;
+                height: 0.2rem;
+                line-height: 0.2rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin-bottom: 0.02rem;
+            }
+            .yh-picCar {
+                height: 0.4rem;
+                margin-bottom: 0.2rem;
+                line-height: 0.4rem;
+                em {
+                    color: #f0593f;
+                    font-size: 0.2rem;
+                    float: left;
+                }
+                b {
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+                    border-bottom: 2px solid #a4a4a4;
+                    padding: 5px;
+                    float: right;
+                    color: #666;
+                    i {
+                        font-size: 0.2rem;
+                    }
+                }
+            }
+        }
+    }

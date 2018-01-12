@@ -9,7 +9,7 @@
 			<i class="yo-ico">&#xe651;</i>
 			<span>分类</span>
 		</router-link>
-		<router-link to="" tag="li">
+		<router-link to="/yuehui" tag="li">
 			<i class="yo-ico">&#xe669;</i>
 			<span>约惠</span>
 		</router-link>

@@ -14,6 +14,7 @@
 	import AppHeader from './components/header/AppHeader'
 	import AppList from './components/boylist/boylist'
 	import BackTop from './components/common/back-top'
+	import Yuehui from './components/yuehui/yuehui'
 	export default {
 		name: 'app',
 		data:function(){
@@ -27,7 +28,7 @@
 			}
 		},
 		components: {
-			AppFooter,AppHeader,AppList,BackTop
+			AppFooter,AppHeader,AppList,BackTop,Yuehui
 		},
 		methods:{
 			get(id){
