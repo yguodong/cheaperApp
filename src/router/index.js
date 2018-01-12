@@ -16,9 +16,9 @@ const routes=[
 	{path:'/home',name:'home',component:Home},
 	{path:'/list',name:'list',component:AppList},
 	{path:'/register',name:'register',component:AppRegister},
-	{path:'**',redirect:'home'},
 	{path:'/boylist',name:'boylist',component:AppBoyList},
-	{path:'/car',name:'goods',component:AppGoods}
+	{path:'/car',name:'goods',component:AppGoods},
+	{path:'**',redirect:'home'}
 ]
 
 const router= new Router({
