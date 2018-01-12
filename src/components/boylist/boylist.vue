@@ -2,18 +2,18 @@
 	<div class="boy-list"> 
 		<app-beautiful :AppHeaderList='AppHeaderList'></app-beautiful>
 		<dl v-for="goods in list">
-			<dt :style="{'background':'url('+goods.info.cover_image+') no-repeat center center','background-size':'cover'}">
+			<router-link to="" tag="dt" :style="{'background':'url('+goods.info.cover_image+') no-repeat center center','background-size':'cover'}">
 				<em></em>
 				<em></em>
-			</dt>
+			</router-link>
 			<dd>
-				<div class="where">
+				<router-link to="" tag="div" class="where">
 					<p>
 						<span>{{goods.info.country}}  | {{goods.info.title_desc}}</span>
 						<i v-for="txt in goods.info.icon_display">{{txt.txt}}</i>
 					</p>
 					<em>[{{goods.info.brand_name}}]{{goods.info.description}}</em>
-				</div>
+				</router-link>
 				<div class="price">
 					<span>￥{{goods.info.price}}</span>
 					<p>
