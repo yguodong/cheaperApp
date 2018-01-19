@@ -4,7 +4,7 @@
 		<AppList v-if="false"></AppList>
 		<AppFooter :gdShow='gdShow' :gdHide="gdHide"></AppFooter>
 		<BackTop v-back-top v-scroll-show:700="isBackShow" :isshow="isBackShow"></BackTop>
-		<router-view :AppHeaderList='AppHeaderList'></router-view>
+		<router-view :AppHeaderList='AppHeaderList' @change-id="ndetailID" :detailID="detailID"></router-view>
 	</div>
 </template>
 
@@ -24,7 +24,8 @@
 				isBoyList:false,
 				isBackShow: {
 					value: false
-				}
+				},
+				detailID:""
 			}
 		},
 		components: {
@@ -43,6 +44,10 @@
 			},
 			gdHide(){
 				this.isTopShow=true
+			},
+			ndetailID(id){
+				this.detailID = id
+				//console.log(this.detailID)
 			}
 		},
 		mounted(){

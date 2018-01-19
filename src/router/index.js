@@ -13,6 +13,9 @@ import AppGoods from '@/components/goods/AppGoods'
 import AppYuehui from '@/components/yuehui/yuehui'
 import AppMyInfo from '@/components/myinfo/myinfo'
 import AppMyInfoOrder from '@/components/myinfo/order'
+
+import AppDetail from '@/components/boylist/detail'
+>>>>>>> nxm
 const routes=[
 	{path:'',redirect:'/home'},
 	{path:'/home',name:'home',component:Home},
@@ -21,8 +24,12 @@ const routes=[
 	{path:'/boylist',name:'boylist',component:AppBoyList},
 	{path:'/car',name:'goods',component:AppGoods},
 	{path:'/yuehui',name:'yuehui',component:AppYuehui},
+<<<<<<< HEAD
 	{path:'/myinfo',name:'myinfo',component:AppMyInfo},
 	{path:'/order/:type',name:'order',component:AppMyInfoOrder},
+=======
+	{path:'/detail',name:'detail',component:AppDetail},
+>>>>>>> nxm
 	{path:'**',redirect:'home'}
 	
 ]
