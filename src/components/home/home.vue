@@ -90,7 +90,7 @@
 		methods: {
 			getHomeHeaderImg() {
 				let that = this
-				axios.get('http:/localhost:4000/dl/api/index/index', {
+				axios.get('http://localhost:4000/dl/api/index/index', {
 						params: {
 							_: Date.now()
 						}
