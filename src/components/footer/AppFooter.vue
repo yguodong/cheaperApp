@@ -17,7 +17,7 @@
 		<i class="yo-ico">&#xe501;</i>
 			<span>购物车</span>
 		</router-link>
-		<router-link to="/register" tag="li" @click.native="gdShow">
+		<router-link to="/myinfo" tag="li" @click.native="gdShow">
 			<i class="yo-ico">&#xe603;</i>
 			<span>我的</span>
 		</router-link>
