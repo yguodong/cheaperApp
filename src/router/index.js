@@ -3,7 +3,7 @@ import Router from 'vue-router'
 //列表页面
 import AppList from '../components/ylist/AppList.vue'
 import AppRegister from '../components/register/AppRegister.vue'
-
+import AppSearch from '../components/ysearch/AppSearch.vue'
 
 Vue.use(Router)
 import Home from '../components/home/home'
@@ -16,9 +16,10 @@ const routes=[
 	{path:'/home',name:'home',component:Home},
 	{path:'/list',name:'list',component:AppList},
 	{path:'/register',name:'register',component:AppRegister},
-	{path:'**',redirect:'home'},
+	{path:'/search',name:'search',component:AppSearch},
 	{path:'/boylist',name:'boylist',component:AppBoyList},
-	{path:'/car',name:'goods',component:AppGoods}
+	{path:'/car',name:'goods',component:AppGoods},
+	{path:'**',redirect:'home'},
 ]
 
 const router= new Router({

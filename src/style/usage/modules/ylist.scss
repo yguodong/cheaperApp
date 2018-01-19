@@ -1,11 +1,13 @@
 
 .app-list{
     height:100%;
+    position:fixed;
     
 }
 
 
 .ylscontent{
+    position: relative;
     @include flexbox();
     @include flex-direction(row);
     height:100%;
@@ -13,7 +15,10 @@
     border-top:1px solid #ccc;
 // 左侧列表
     .leftsort{
-        width:1.2rem;
+        position:fixed;
+        left:0;
+        top:0.77rem;
+        width:.96rem;
         
         color:#000;
         ul{
@@ -44,6 +49,9 @@
 
 //右侧布局
     .rightsort{
+        
+        margin-left:.96rem;
+        
         width: 100%;
         background: #fff;
         overflow-y:auto;

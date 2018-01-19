@@ -4,7 +4,7 @@
 		<AppList v-if="false"></AppList>
 		<AppFooter :gdShow='gdShow' :gdHide="gdHide"></AppFooter>
 		<BackTop v-back-top v-scroll-show:700="isBackShow" :isshow="isBackShow"></BackTop>
-		<router-view :AppHeaderList='AppHeaderList'></router-view>
+		<router-view :AppHeaderList='AppHeaderList' ></router-view>
 	</div>
 </template>
 
@@ -21,9 +21,8 @@
 				isTopShow:true,
 				AppHeaderList:"11",
 				isBoyList:false,
-				isBackShow: {
-					value: false
-				}
+				isBackShow: {value: false},
+				sec:{}
 			}
 		},
 		components: {
@@ -42,7 +41,10 @@
 			},
 			gdHide(){
 				this.isTopShow=true
-			}
+			},
+			
+
+
 		},
 		mounted(){
 			bus.$on('m-boy',function(){
