@@ -2,7 +2,7 @@
 	<div class="app-goods">
 		<div class="shopTop">
 			<span>我的购物车</span>
-			<i @click="gShow">编辑</i>
+			<i @click="gShow" v-if="car.length">编辑</i>
 		</div>
 		<div class="shopCenter">
 			<div class="kong" v-if="!car.length">
@@ -64,6 +64,8 @@
 
 <script> 
 	import { mapState,mapGetters,mapActions } from 'vuex'
+	import * as g from '../../store/g_type.js'
+	import * as a from '../../store/a_type.js'
 	export default{
 		name:'app-goods',
 		data:function(){
@@ -74,10 +76,10 @@
 		},
 		computed:{
 			...mapState(['car','AppHeaderList','isNum','isTclass']),
-			...mapGetters(['money','num'])
+			...mapGetters([g.MONEY,g.NUM])
 		},
 		methods:{
-			...mapActions(['initCar','addGoods','reduceGoods','Iclass','Fclass','removeGoods']),
+			...mapActions([a.INITCAR,a.ADDGOODS,a.REDUCEGOODS,a.ICLASS,a.FCLASS,a.REMOVEGOODS]),
 			nClass(){
 				this.isClass = !this.isClass
 			},
