@@ -15,7 +15,7 @@
 				<div v-for="img1 in cLise.list" class="on-Img">
 					<img v-for="img2 in img1.list" :src="img2.tpl_id==1?img2.cover:''" alt="" />
 				</div>
-				<p style="border-bottom: 1px solid red;">距离结束还有{{cLise.end_time}}秒</p>
+				<p style="border-bottom: 1px solid red;"><i class="fa fa-clock-o"></i>距离结束还有{{cLise.end_time}}秒</p>
 			</div>
 
 			<div v-for="clisee in contentListt" class="title2">

@@ -12,6 +12,8 @@ import AppBoyList from '@/components/boylist/boylist'
 import AppGoods from '@/components/goods/AppGoods'
 import AppYuehui from '@/components/yuehui/yuehui'
 import AppDetail from '@/components/boylist/detail'
+import AppMyInfo from '@/components/myinfo/myinfo'
+import AppMyInfoOrder from '@/components/myinfo/order'
 const routes=[
 	{path:'',redirect:'/home'},
 	{path:'/home',name:'home',component:Home},
@@ -22,6 +24,8 @@ const routes=[
 	{path:'/car',name:'goods',component:AppGoods},
 	{path:'/yuehui',name:'yuehui',component:AppYuehui},
 	{path:'/detail',name:'detail',component:AppDetail},
+	{path:'/myinfo',name:'myinfo',component:AppMyInfo},
+	{path:'/order/:type',name:'order',component:AppMyInfoOrder},
 	{path:'**',redirect:'home'}
 	
 ]
